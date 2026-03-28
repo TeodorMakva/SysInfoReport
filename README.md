@@ -1,1 +1,41 @@
 # SysInfoReport
+
+Программа собирает информацию о системе: OS, CPU, GPU, диски, материнская плата, память и сеть.  
+Результат сохраняется в текстовый отчёт.
+
+Файл для записи задаётся через аргумент запуска:
+
+```bash
+-f <output_file>
+```
+
+## Возможности
+
+- Сбор информации о системе.
+- Сохранение отчёта в текстовый файл.
+- Поддержка запуска через аргументы командной строки.
+
+## Требования
+
+- C++17.
+- CMake 4.0 или выше.
+- На Windows проект линкуется с:
+  - `dxgi`
+  - `psapi`
+  - `wbemuuid`
+  - `iphlpapi`
+  - `ws2_32`
+
+## Сборка
+
+### Windows (CLion)
+
+- Toolchain: MinGW (GCC/G++) 13.2.0
+- Generator / Build tool: Ninja
+- CMake: Bundled (CLion)
+
+### Linux (Astra Linux, CLion)
+
+- Toolchain: System GCC/G++ 8.3.0 (`gcc-8` / `g++-8`)
+- Generator / Build tool: Ninja
+- CMake: Bundled (CLion)
